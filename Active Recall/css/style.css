@@ -1,0 +1,141 @@
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#e8eef7,#d5dff0);
+    margin:0;
+    text-align:center;
+}
+
+.auth-container{
+    width: 300px;
+    margin: 80px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+input, select{
+    width: 90%;
+    padding:10px;
+    margin:10px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+button{
+    padding:10px 20px;
+    background:#3f51b5;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    background:#303f9f;
+}
+
+.subjects-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+    gap:15px;
+    padding:20px;
+}
+
+.subject-box{
+    background:#3f51b5;
+    color:white;
+    padding:20px;
+    border-radius:10px;
+    cursor:pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.subject-box:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    background:#5c6bc0;
+}
+
+.flashcards-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+    gap:15px;
+    padding:20px;
+}
+
+.flashcard{
+    width: 140px;
+    height: 180px;
+    perspective:1000px;
+    cursor:pointer;
+}
+
+.card-inner{
+    position: relative;
+    width:100%;
+    height:100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    border-radius:10px;
+}
+
+.flashcard.flipped .card-inner{
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:10px;
+    backface-visibility:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:10px;
+    font-size:14px;
+    text-align:center;
+}
+
+.card-front{
+    background:#fefefe;
+    color:#333;
+}
+
+.card-back{
+    background:#d0d0f0;
+    color:#222;
+    transform: rotateY(180deg);
+}
+
+.flashcard:hover .card-inner{
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.stats{
+    margin:20px;
+}
+
+/* Popup Editor */
+.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    align-items:center;
+    justify-content:center;
+}
+
+.popup-content{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    width:300px;
+    text-align:center;
+}

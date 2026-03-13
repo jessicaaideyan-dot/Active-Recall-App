@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Flashcards</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1 id="subjectTitle"></h1>
+
+<div id="flashcardsGrid" class="flashcards-grid"></div>
+
+<div id="popupEditor" class="popup">
+    <div class="popup-content">
+        <h3>Add Question & Answer</h3>
+        <input id="popupQuestion" placeholder="Question">
+        <input id="popupAnswer" placeholder="Answer">
+        <button onclick="saveCard()">Save</button>
+        <button onclick="closePopup()">Cancel</button>
+    </div>
+</div>
+
+<script src="js/flashcards.js"></script>
+
+</body>
+</html>
